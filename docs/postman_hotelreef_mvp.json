@@ -1,0 +1,110 @@
+{
+  "info": {
+    "name": "Hotel Pacific Reef \u2014 MVP",
+    "_postman_id": "e3b1c1c0-0000-4444-8888-aaaaaaaaaaaa",
+    "description": "Colecci\u00f3n Postman para endpoints MVP Semana 7",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Disponibles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/api/habitaciones/disponibles?entrada={{ENTRADA}}&salida={{SALIDA}}&hotel_id={{HOTEL_ID}}",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "habitaciones",
+            "disponibles"
+          ],
+          "query": [
+            {
+              "key": "entrada",
+              "value": "{{ENTRADA}}"
+            },
+            {
+              "key": "salida",
+              "value": "{{SALIDA}}"
+            },
+            {
+              "key": "hotel_id",
+              "value": "{{HOTEL_ID}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Crear reserva",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cliente_id\": 1,\n  \"habitacion_id\": 1,\n  \"fecha_entrada\": \"2025-10-10\",\n  \"fecha_salida\": \"2025-10-12\",\n  \"cantidad_personas\": 2\n}"
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/reservas",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "reservas"
+          ]
+        }
+      }
+    },
+    {
+      "name": "(Opcional) Montos por reserva",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/api/reservas/{{RESERVA_ID}}/montos",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "reservas",
+            "{{RESERVA_ID}}",
+            "montos"
+          ]
+        }
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "http://localhost:8000"
+    },
+    {
+      "key": "ENTRADA",
+      "value": "2025-10-10"
+    },
+    {
+      "key": "SALIDA",
+      "value": "2025-10-12"
+    },
+    {
+      "key": "HOTEL_ID",
+      "value": "1"
+    },
+    {
+      "key": "RESERVA_ID",
+      "value": "1"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@reference "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* helpers opcionales */
+.btn { @apply rounded-2xl px-4 py-2 bg-[#2E8BC0] text-white shadow hover:opacity-90; }
+.btn-outline { @apply rounded-2xl px-3 py-1 border border-gray-300 hover:bg-gray-50; }
+.card { @apply bg-white border border-gray-200 rounded-2xl p-4 shadow-sm; }
+.input { @apply border border-gray-300 rounded-xl px-3 py-2 w-full; }
+.label { @apply text-sm text-gray-700; display:block; }
+.chip { @apply text-xs px-2 py-1 rounded-full border border-gray-300 bg-white hover:bg-gray-50; }

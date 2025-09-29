@@ -1,0 +1,49 @@
+# ==== Backend (Django / Python) ====
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/*.sqlite3
+backend/*.log
+backend/.env
+*.sqlite3
+__pycache__/
+*.py[cod]
+
+# Entornos virtuales
+.venv/
+env/
+venv/
+
+# Archivos sensibles
+*.env
+*.secret
+
+# Archivos de compilación
+*.egg-info/
+*.egg
+
+# Archivos estáticos y media
+/media/
+staticfiles/
+
+# ==== Frontend (React / Vite / Ionic) ====
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/*.local
+frontend/www/
+frontend/plugins/
+frontend/android/
+frontend/ios/
+
+# ==== Configuración de IDEs ====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==== Archivos del sistema ====
+.DS_Store
+Thumbs.db
