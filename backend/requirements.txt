@@ -1,5 +1,13 @@
+# Framework principal
 Django>=5.0.0,<6.0
 djangorestframework>=3.15.0
+
+# Autenticación JWT
+djangorestframework-simplejwt>=5.3.0
+
+# Conexión con PostgreSQL
 psycopg2-binary>=2.9.9
-python-dotenv>=1.0.1
+
+# CORS y variables de entorno
 django-cors-headers>=4.3.1
+python-dotenv>=1.0.1
